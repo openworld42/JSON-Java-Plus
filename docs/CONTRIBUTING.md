@@ -20,4 +20,8 @@ Anyone can submit pull requests for code, tests, or documentation.
 
 [README.md (includes build instructions)](https://github.com/openworld42/JSON-Java-Plus#readme)
 
-[FAQ - all your questions answered](https://github.com/openworld42/JSON-Java-Plus/wiki/FAQ)
+[FAQ of JSON-java - all your questions answered](https://github.com/stleary/JSON-java/wiki/FAQ)
+
+The FAQ answers most of your questions, except for ordering and formatted JSON output.
+
+JSON-Java-Plus will fill in the blank.

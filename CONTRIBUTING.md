@@ -10,7 +10,7 @@ Anyone can submit pull requests for code, tests, or documentation.
 
 # How do you decide which pull requests to accept?
 
-* Is it a bug/feature/major user inconvenience that belongs to the basic implementation of JSON-Java? Open an issue or PR [there](https://github.com/stleary/JSON-java/issues) - JSON-Java-Plus will integrate the fix from JSON-Java.
+* Is it a bug/feature/major user inconvenience that belongs to the basic implementation of JSON-java? Open an issue or PR [there](https://github.com/stleary/JSON-java/issues) - JSON-Java-Plus will integrate the fix from JSON-Java.
 * Does it call out a bug that needs to be fixed? If so, it goes to the top of the list.
 * Does it fix a major user inconvenience? These are given high priority as well.
 * Does it align with the specs? If not, it will probably not be accepted. It turns out there are gray areas in the specs. If this is in a gray area, it will likely be given the benefit of the doubt.
@@ -20,4 +20,9 @@ Anyone can submit pull requests for code, tests, or documentation.
 
 [README.md (includes build instructions)](https://github.com/openworld42/JSON-Java-Plus#readme)
 
-[FAQ - all your questions answered](https://github.com/openworld42/JSON-Java-Plus/wiki/FAQ)
+[FAQ of JSON-java - all your questions answered](https://github.com/stleary/JSON-java/wiki/FAQ)
+
+The FAQ answers most of your questions, except for ordering and formatted JSON output.
+
+JSON-Java-Plus will fill in the blank.
+

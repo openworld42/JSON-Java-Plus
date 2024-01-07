@@ -28,10 +28,11 @@ to store, administer and observe the information within these output files)
 support to store information as JSON objects in files (several applications do that already)
 * JSON-Java is easy to use and the integration in a Java project is straightforward
 * An attempt to contribute to JSON-Java, not breaking any previous behavior, together with some code analysis, suggestions and discussion,
-failed ("However, the RFC states that objects are unordered, and as a reference app, JSON-Java tries to follow the spec. You have the right idea to fork the repo and make changes that are suitable for your application." Details can be found [here](https://github.com/stleary/JSON-java/issues/822))
+failed: "However, the RFC states that objects are unordered, and as a reference app, JSON-Java tries to follow the spec. You have the right idea to fork the repo and make changes that are suitable for your application." Details can be found [here](https://github.com/stleary/JSON-java/issues/822).
 * The [RFC](https://datatracker.ietf.org/doc/html/rfc8259) defines "An object is an unordered collection of zero or more name/value
 pairs". This is a true definition for JSON input, but never for writing JSON output. There is always an algorithm behind writing, and, by nature, the order is defined by the algorithm - in JSON-Java the natural order of a keyset of a HashMap, dependent on the capacity dependent behavior of the HashMap bin insertion. In short, true JSON output can use any order, so why not use the order of insertion respectively the order of a JSON input file to make the output human-readable.
-* There are other issues for writing JSON files: line breaks and formatting (imagine large JSON arrays), according to the definition of JSON resulting in valid JSON output.
+* There are other issues for writing JSON files: line breaks and formatting (imagine large JSON arrays), according to the definition of JSON resulting in valid JSON output. It seems unlikely, that JSON-Java would integrate other user convenience items after the above.
+* If there is a requirement that is clear and for the benefit of the community, feel free to open an [issue](https://github.com/openworld42/JSON-Java-Plus/issues). If the requirement does not break the goals of JSON-Java-Plus nor the spec, and is not specific to only one application, it can be integrated for the benefit of all.
 
 Project goals include:
 * Stay as close to JSON-Java as possible, with the above enhancements
