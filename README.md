@@ -6,9 +6,8 @@
 JSON in Java [package org.json]
 ===============================
 
-[![Maven Central](https://img.shields.io/maven-central/v/org.json/json.svg)](https://mvnrepository.com/artifact/org.json/json)
-[![Java CI with Maven](https://github.com/stleary/JSON-java/actions/workflows/pipeline.yml/badge.svg)](https://github.com/stleary/JSON-java/actions/workflows/pipeline.yml)
-[![CodeQL](https://github.com/stleary/JSON-java/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/stleary/JSON-java/actions/workflows/codeql-analysis.yml)
+[![Java CI with Maven](https://github.com/openworld42/JSON-Java-Plus/actions/workflows/pipeline.yml/badge.svg)](https://github.com/openworld42/JSON-Java-Plus/actions/workflows/pipeline.yml)
+[![CodeQL](https://github.com/openworld42/JSON-Java-Plus/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/openworld42/JSON-Java-Plus/actions/workflows/codeql-analysis.yml)
 
 **[Click here if you just want the latest release jar file.](https://search.maven.org/remotecontent?filepath=org/json/json/20231013/json-20231013.jar)**
 
@@ -17,9 +16,25 @@ JSON in Java [package org.json]
 
 [JSON](http://www.JSON.org/) is a light-weight language-independent data interchange format.
 
-The JSON-Java package is a reference implementation that demonstrates how to parse JSON documents into Java objects and how to generate new JSON documents from the Java classes.
+The JSON-Java-Plus package is a fork of [JSON-Java](https://github.com/stleary/JSON-java), which is a reference implementation that demonstrates how to parse JSON documents into Java objects and how to generate new JSON documents from the Java classes.
+
+Therefore, all credits, kudos and attribution goes to the authors, contributors and maintainers of JSON-Java.
+
+**Why is this fork exiting, and what are the advantages and differences compared to JSON-Java:**
+* JSON-Java has only basic support for using JSON objects and JSON arrays to store information in files (there is only the
+natural order of HashMap for JSON object keys, which creates a somewhat chaotic arrangement of the output, making it difficult
+to store, administer and observe the information within these output files)
+* Since JSON is widely used and one of the shortest format to store or distribute information, there is a need for 
+support to store information as JSON objects in files (several applications do that already)
+* JSON-Java is easy to use and the integration in a Java project is straightforward
+* An attempt to contribute to JSON-Java, not breaking any previous behavior, together with some code analysis, suggestions and discussion,
+failed ("However, the RFC states that objects are unordered, and as a reference app, JSON-Java tries to follow the spec. You have the right idea to fork the repo and make changes that are suitable for your application." Details can be found [here](https://github.com/stleary/JSON-java/issues/822))
+* The [RFC](https://datatracker.ietf.org/doc/html/rfc8259) defines "An object is an unordered collection of zero or more name/value
+pairs". This is a true definition for JSON input, but never for writing JSON output. There is always an algorithm behind writing, and, by nature, the order is defined by the algorithm - in JSON-Java the natural order of a keyset of a HashMap, dependent on the capacity dependent behavior of the HashMap bin insertion. In short, true JSON output can use any order, so why not use the order of insertion respectively the order of a JSON input file to make the output human-readable.
+* There are other issues for writing JSON files: line breaks and formatting (imagine large JSON arrays), according to the definition of JSON resulting in valid JSON output.
 
 Project goals include:
+* Stay as close to JSON-Java as possible, with the above enhancements
 * Reliable and consistent results
 * Adherence to the JSON specification 
 * Easy to build, use, and include in other projects
@@ -29,13 +44,13 @@ Project goals include:
 * Designed and tested to use on Java versions 1.8 - 21
 
 
-The files in this package implement JSON encoders and decoders. The package can also convert between JSON and XML, HTTP headers, Cookies, and CDL.
+The files in this package implement JSON encoders and decoders. The package can also convert between JSON and XML, HTTP headers, Cookies, and CDL (comma delimited text, CSV).
 
 # If you would like to contribute to this project
 
-For more information on contributions, please see [CONTRIBUTING.md](https://github.com/stleary/JSON-java/blob/master/docs/CONTRIBUTING.md)
+For more information on contributions, please see [CONTRIBUTING.md](https://github.com/openworld42/JSON-Java-Plus/blob/master/docs/CONTRIBUTING.md)
 
-Bug fixes, code improvements, and unit test coverage changes are welcome! Because this project is currently in the maintenance phase, the kinds of changes that can be accepted are limited. For more information, please read the [FAQ](https://github.com/stleary/JSON-java/wiki/FAQ).
+Bug fixes, code improvements, and unit test coverage changes are welcome! Because this project is currently in the maintenance phase, the kinds of changes that can be accepted are limited. For more information, please read the [FAQ](https://github.com/openworld42/JSON-Java-Plus/wiki/FAQ).
 
 # Build Instructions
 
@@ -99,12 +114,12 @@ gradlew clean build test
 
 # Notes
 
-For more information, please see [NOTES.md](https://github.com/stleary/JSON-java/blob/master/docs/NOTES.md)
+For more information, please see [NOTES.md](https://github.com/openworld42/JSON-Java-Plus/blob/master/docs/NOTES.md)
 
 # Files
 
-For more information on files, please see [FILES.md](https://github.com/stleary/JSON-java/blob/master/docs/FILES.md)
+For more information on files, please see [FILES.md](https://github.com/openworld42/JSON-Java-Plus/blob/master/docs/FILES.md)
 
 # Release history:
 
-For the release history, please see [RELEASES.md](https://github.com/stleary/JSON-java/blob/master/docs/RELEASES.md)
+For the release history, please see [RELEASES.md](https://github.com/openworld42/JSON-Java-Plus/blob/master/docs/RELEASES.md)
