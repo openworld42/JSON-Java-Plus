@@ -1,4 +1,4 @@
-![Json-Java logo](https://github.com/stleary/JSON-java/blob/master/images/JsonJava.png?raw=true)
+![Json-Java logo](https://github.com/openworld42/JSON-Java-Plus/blob/master/images/JsonJava.png?raw=true)
 
 <sub><sup>image credit: Ismael Pérez Ortiz</sup></sub>
 
@@ -16,26 +16,27 @@ JSON in Java [package org.json]
 
 [JSON](http://www.JSON.org/) is a light-weight language-independent data interchange format.
 
-The JSON-Java-Plus package is a fork of [JSON-Java](https://github.com/stleary/JSON-java), which is a reference implementation that demonstrates how to parse JSON documents into Java objects and how to generate new JSON documents from the Java classes.
+The JSON-Java-Plus package is a fork of [JSON-java](https://github.com/stleary/JSON-java), which is a reference implementation that demonstrates how to parse JSON documents into Java objects and how to generate new JSON documents from the Java classes.
 
-Therefore, all credits, kudos and attribution goes to the authors, contributors and maintainers of JSON-Java.
+Therefore, all credits, kudos and attribution goes to the authors, contributors and maintainers of JSON-java.
 
-**Why is this fork exiting, and what are the advantages and differences compared to JSON-Java:**
-* JSON-Java has only basic support for using JSON objects and JSON arrays to store information in files (there is only the
+**Why is this fork existing, and what are the advantages and differences compared to JSON-Java:**
+
+* JSON-java has only basic support for using JSON objects and JSON arrays to store information in files (there is just the
 natural order of HashMap for JSON object keys, which creates a somewhat chaotic arrangement of the output, making it difficult
-to store, administer and observe the information within these output files)
-* Since JSON is widely used and one of the shortest format to store or distribute information, there is a need for 
-support to store information as JSON objects in files (several applications do that already)
-* JSON-Java is easy to use and the integration in a Java project is straightforward
+to store, administer and observe the information within output files).
+* Since JSON is widely used and one of the shortest formats to store or distribute information, there is a need for 
+support to store information as JSON objects in files (several applications do that already).
+* JSON-java is a perfect solution: lightweight, easy to use and the integration in a Java project is straightforward.
 * An attempt to contribute to JSON-Java, not breaking any previous behavior, together with some code analysis, suggestions and discussion,
 failed: "However, the RFC states that objects are unordered, and as a reference app, JSON-Java tries to follow the spec. You have the right idea to fork the repo and make changes that are suitable for your application." Details can be found [here](https://github.com/stleary/JSON-java/issues/822).
 * The [RFC](https://datatracker.ietf.org/doc/html/rfc8259) defines "An object is an unordered collection of zero or more name/value
-pairs". This is a true definition for JSON input, but never for writing JSON output. There is always an algorithm behind writing, and, by nature, the order is defined by the algorithm - in JSON-Java the natural order of a keyset of a HashMap, dependent on the capacity dependent behavior of the HashMap bin insertion. In short, true JSON output can use any order, so why not use the order of insertion respectively the order of a JSON input file to make the output human-readable.
-* There are other issues for writing JSON files: line breaks and formatting (imagine large JSON arrays), according to the definition of JSON resulting in valid JSON output. It seems unlikely, that JSON-Java would integrate other user convenience items after the above.
+pairs". This is a true definition for JSON input, but never for writing JSON output. There is always an algorithm behind writing, and, by nature, the order is defined by the algorithm - in JSON-java the natural order of a keyset of a HashMap, dependent on the capacity dependent behavior of the HashMap bin insertion. In short, true JSON output can use any order, so why not use the order of insertion respectively the order of a JSON input file to make the output more human-readable?
+* There are other issues for writing JSON files: line breaks and formatting (imagine a large JSON array), according to the definition of JSON resulting in valid JSON output. It seems unlikely, that JSON-Java would integrate other user convenience items after the above.
 * If there is a requirement that is clear and for the benefit of the community, feel free to open an [issue](https://github.com/openworld42/JSON-Java-Plus/issues). If the requirement does not break the goals of JSON-Java-Plus nor the spec, and is not specific to only one application, it can be integrated for the benefit of all.
 
 Project goals include:
-* Stay as close to JSON-Java as possible, with the above enhancements
+* Stay as close to JSON-java as possible, with the above enhancements
 * Reliable and consistent results
 * Adherence to the JSON specification 
 * Easy to build, use, and include in other projects
@@ -51,7 +52,9 @@ The files in this package implement JSON encoders and decoders. The package can 
 
 For more information on contributions, please see [CONTRIBUTING.md](https://github.com/openworld42/JSON-Java-Plus/blob/master/docs/CONTRIBUTING.md)
 
-Bug fixes, code improvements, and unit test coverage changes are welcome! Because this project is currently in the maintenance phase, the kinds of changes that can be accepted are limited. For more information, please read the [FAQ](https://github.com/openworld42/JSON-Java-Plus/wiki/FAQ).
+# If you would like to contribute to JSON-java
+
+Bug fixes, code improvements, and unit test coverage changes are welcome! Because JSON-java is currently in the maintenance phase, the kinds of changes that can be accepted are limited. For more information, please read the [FAQ](https://github.com/stleary/JSON-java/wiki/FAQ).
 
 # Build Instructions
 

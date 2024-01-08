@@ -22,7 +22,7 @@ Anyone can submit pull requests for code, tests, or documentation.
 
 [FAQ of JSON-java - all your questions answered](https://github.com/stleary/JSON-java/wiki/FAQ)
 
-The FAQ answers most of your questions, except for ordering and formatted JSON output.
+The FAQ answers most of your questions, except for ordering and formatting JSON output:
 
 JSON-Java-Plus will fill in the blank.
 
